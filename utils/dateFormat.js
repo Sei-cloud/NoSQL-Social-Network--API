@@ -3,5 +3,4 @@ const dateFormat = (timestamp = Date.now()) => {
     return new Date(timestamp).toLocaleString();
 };
 
-
 module.exports = dateFormat;
