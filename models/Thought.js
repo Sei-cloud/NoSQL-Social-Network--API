@@ -1,19 +1,24 @@
 const { Schema, model, Types } = require('mongoose');
 
+// Reaction schema
 const reactionSchema = new Schema({
+  // Defining Id
   reactionId: {
     type: Schema.Types.ObjectId,
     default: () => new Types.ObjectId()
   },
+  // Defining body attributes
   reactionBody: {
     type: String,
     required: true,
     maxlength: 280
   },
+  // Defining username 
   username: {
     type: String,
     required: true
   },
+  // Defining a timestamp
   createdAt: {
     type: Date,
     default: Date.now,
