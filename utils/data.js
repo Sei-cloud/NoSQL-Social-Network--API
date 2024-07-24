@@ -31,6 +31,9 @@ const thoughts = [
 // Function to get a unique random username from the names array
 // The selected name is removed from the array to avoid repetition
 const getRandomName = () => {
+    if (names.length === 0) {
+        return 'No more names available';
+    }
     const index = Math.floor(Math.random() * names.length);
     return names.splice(index, 1)[0];
 };
@@ -38,6 +41,9 @@ const getRandomName = () => {
 // Function to get a unique random thought from the thoughts array
 // The selected thought is removed from the array to avoid repetition
 const getRandomThought = () => {
+    if (thoughts.length === 0) {
+        return 'No more thoughts available';
+    }
     const index = Math.floor(Math.random() * thoughts.length);
     return thoughts.splice(index, 1)[0];
 };

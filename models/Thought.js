@@ -11,7 +11,7 @@ const reactionSchema = new Schema({
         default: () => new Types.ObjectId(),
     },
     // defining the reaction content's attributes
-    reactionBody: {
+    reactionText: {
         type: String,
         required: true,
         maxlength: 280,
